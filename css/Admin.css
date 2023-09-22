@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+header,
+main,
+
+footer {
+    padding-left: 240px;
+
+
+}
+
+body {
+    /*backgroud: white;*/
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0e0e0e;
+    line-height: 2;
+    background-color: #ffffff;
+
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+
+    footer {
+        padding-left: 0;
+
+    }
+
+}
+
+#credits li,
+#credits li a {
+    color: #8b8d78;
+    background-color: #d9c6ae;
+}
+
+#credits li a {
+    font-weight: bold;
+}
+
+.fab-tip {
+    position: fixed;
+    right: 85px;
+    padding: 0px 0.5rem;
+    text-align: right;
+    background-color: #8b8d78;
+    border-radius: 2px;
+    color: #d9c6ae;
+    width: auto;
+}

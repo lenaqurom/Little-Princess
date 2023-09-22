@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    color: #0e0e0e;
+}
+body{
+
+    background: url("../image/amazing-cute-little-girl-with-long-brunette-hair-walking-with-white-packages-isolated-pink-background-little-happiness-expressing-true-positive-emotions-camera-place-text.jpg") center center no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-size: cover;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: rgb(0,0,0,0.0001);
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    margin-right: 700px;    /*                   **********                 here          **********              */
+}
+
+.input-box small{
+    color: #ffffff;
+    visibility: hidden;
+}
+.input-box.error small {
+    visibility: visible;
+}
+
+
+.container .title{
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    color: #0e0e0e;
+}
+.container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #0e0e0e, #ffffff);
+}
+.content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+    color: white;
+}
+form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background-color: rgb(0,0,0,0.0001);
+    color: white;
+
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #0e0e0e;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 ;
+    justify-content: space-between;
+}
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: rgb(0,0,0,0.0001);
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    background: #d9c6ae;
+    border-color: #d9d9d9;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 35px ;
+
+
+    display: flex;
+
+}
+
+form .button button.cancel,
+form .button input{
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: black;
+
+}
+
+form .button button.cancel:hover,
+form .button input:hover{
+    /* transform: scale(0.99); */
+    color: black;
+    background: white;
+}
+@media(max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .category{
+        width: 100%;
+    }
+    .content form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+@media(max-width: 459px){
+    .container .content .category{
+        flex-direction: column;
+    }
+}

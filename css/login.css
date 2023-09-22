@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    background: transparent;
+}
+
+html,body{
+
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: url("../image/amazing-cute-little-girl-with-long-brunette-hair-walking-with-white-packages-isolated-pink-background-little-happiness-expressing-true-positive-emotions-camera-place-text.jpg") center center no-repeat;
+    background-size: cover;
+}
+::selection{
+    background: #0e0e0e;
+    color: #ffffff;
+}
+.wrapper{
+    width: 380px;
+    background-color: rgb(0,0,0,0.0001);
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.4);
+    margin-right: 700px;
+}
+.wrapper .close-btn{
+    position: absolute;
+    right: 920px;
+    top: 220px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+}
+.wrapper .close-btn:hover{
+    color: #0e0e0e;
+}
+.wrapper .title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #0e0e0e;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(0,0,0,0.0001);
+
+}
+.wrapper form{
+    padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid #0e0e0e;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+    border-color: #ffffff;
+}
+.wrapper form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+    top: 0;
+    font-size: 16px;
+    color: #0e0e0e;
+
+    transform: translateY(-50%);
+}
+form .content{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+form .content .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form .content input{
+    width: 15px;
+    height: 15px;
+    background: #d9c6ae;
+}
+form .content label{
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
+}
+form .field input[type="submit"]{
+    color: #ffffff;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #0e0e0e;
+    transition: all 0.3s ease;
+}
+form .field input[type="submit"]:hover{
+    color: black;
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
+
+form .field input[type="submit"]:active{
+    transform: scale(0.95);
+}
+form .signup-link{
+    color: #262626;
+    margin-top: 20px;
+    text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+    color: #ffffff;
+    text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+    text-decoration: underline;
+    color: black;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

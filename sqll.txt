@@ -1,0 +1,411 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+--
+-- Database: `special`
+--
+
+-- --------------------------------------------------------
+
+
+--
+
+
+CREATE TABLE `jeans` (
+  `name` varchar(70) NOT NULL,
+  `URL` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `flowerID` int(70) NOT NULL,
+  `INFO` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+
+--
+
+INSERT INTO `jeans` (`name`, `URL`, `price`, `flowerID`, `INFO`) VALUES
+('2-PACK SLIM FIT SUPERSTRETCH JEANS', 'https://lp2.hm.com/hmgoepprod?set=source[/96/13/9613150abd7c1e4aeb4ab993f8b5e7bd10eaa0b7.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 110, 1, ''),
+('SKINNY FIT JEANS', 'https://lp2.hm.com/hmgoepprod?set=source[/1c/1a/1c1a909f8bd5af3d3da61dfb505bcf9b5ea9e1e1.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 65, 2, ''),
+('SHORT JEANS', 'https://lp2.hm.com/hmgoepprod?set=source[/00/50/00508ca1328012752088f48144916bfe0453b861.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 70, 3, ''),
+('RELAXED FIT HIGH JEANS', 'https://lp2.hm.com/hmgoepprod?set=source[/bf/7c/bf7c59466a01cc1f7a84b910237d46b1033b768b.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 100, 4, ''),
+('FLARE FIT JEANS', 'https://lp2.hm.com/hmgoepprod?set=source[/ed/2d/ed2d11ef2a23576f4ef68e5003fb9b6d222c2565.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 65, 5, ''),
+('RELAXED FIT HIGH JEANS', 'https://lp2.hm.com/hmgoepprod?set=source[/a5/94/a5948a736e37f10812694346f1049f0e8f205d4e.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 65, 6, ''),
+('DENIM OVERALLS', 'https://lp2.hm.com/hmgoepprod?set=source[/9f/fe/9ffe35e8948ca1941f8bc42427da433f987b3072.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 110, 7, ''),
+('DENIM OVERALLS', 'https://lp2.hm.com/hmgoepprod?set=source[/13/56/135678bb98bc1487215da7de02b72390d8056245.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 110, 8 ,''),
+('PINK INVITATION', 'https://lp2.hm.com/hmgoepprod?set=source[/27/5c/275c139728c41551460a55ec54fc9234e27e0a66.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 70, 9, '');
+-- --------------------------------------------------------
+
+--
+
+--
+
+CREATE TABLE `shoes` (
+  `URL` varchar(70) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `ID` int(70) NOT NULL,
+  `INFO` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+
+--
+
+INSERT INTO `shoes` (`URL`, `name`, `price`, `flowerID`, `INFO`) VALUES
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F38%2F94%2F38948463e1e4934a56783952e3db602c24c020f3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Trainers', 90, 1, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F29%2Fc9%2F29c9ad0092a84c0aa941d788ad694c41cf050a92.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Trainers', 140, 2, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F7d%2Fef%2F7deff9f04984f06f4bdea72fe568c337e62f20ef.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVEDETAIL%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Teddy-lined hi-tops', 120, 3, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F47%2F28%2F472829b65dd6e77dff1294ede08b8ffa53eba2d8.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_boys_shoes_sandalsflipflops%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Slip-on trainers', 100, 4, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fe6%2F3f%2Fe63f229197aaa218fd844f31058d66656195160d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Sandals', 80, 5, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe8%2Fcb%2Fe8cb31d0dd5c65e6c63cdd6ccffb2c89dc0c8d5d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', 'Ballerina trainers', 100 6, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Ffa%2Fc5%2Ffac55593f704a271a9ff432feda60a9dc9de3972.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_girls_shoes_sandalsflipflops%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Sandals', 80, 7, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fe5%2Fe9%2Fe5e9e9a9c70443749a5e60b485768c4e7d05e91b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_boys_shoes_trainers%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Prited Trainers', 100, 8, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F96%2F56%2F96566a4eaff4e34680c78c0f0def77f0eb6d9866.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_girls_shoes_trainers%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Pastel-coloured trainers', 150, 9, '');
+
+-- --------------------------------------------------------
+
+--
+
+--
+
+CREATE TABLE `cart` (
+  `Email` varchar(70) DEFAULT NULL,
+  `name` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `URL` varchar(70) NOT NULL,
+  `id` int(50) NOT NULL,
+  `Quantity` int(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+--
+
+INSERT INTO `cart` (`Email`, `name`, `price`, `URL`, `id`, `Quantity`) VALUES
+('Aya.angel9099@gmail.com', 'Garden Party Bouquet', 200, 'https://i.imgur.com/DXjWBrj.png', 71, 11);
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+CREATE TABLE `members` (
+  `LoginName` text NOT NULL,
+  `LoginPass` text DEFAULT NULL,
+  `UserLevel` int(11) DEFAULT NULL,
+  `Email` varchar(70) DEFAULT NULL,
+  `FullName` varchar(50) NOT NULL,
+  `Phone` int(20) NOT NULL,
+  `City` varchar(70) NOT NULL,
+  `Address` varchar(40) NOT NULL,
+  `code` varchar(70) DEFAULT NULL,
+  `flag` int(10) DEFAULT NULL,
+  `id` int(70) NOT NULL,
+  `ProfilePic` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`LoginName`, `LoginPass`, `UserLevel`, `Email`, `FullName`, `Phone`, `City`, `Address`, `code`, `flag`, `id`, `ProfilePic`) VALUES
+('nuha', '1f7644675a423c3eb045074e73100cd5a964e75b', 1, 'nuhataha2000@gmial.com', 'nuha', 597595989, 'Nablus', 'Palestine', '0', 0, 3, 'https://i.imgur.com/MG7bYxr.jpeg'),
+('hala', '011c945f30ce2cbafc452f39840f025693339c42', 0, 'hala@gmail.com', 'hala', 597567691, 'Nablus', 'Palestine', 'b1e4d8d7aae59d760558', 0, 5, 'https://i.imgur.com/DjmWfmM.jpeg'),
+('amal', '34e0f1a7007f0d4a129317ca8963943f16f1b63d', 1, 'amal12@gmail.com', 'amal', 569210549, 'Jenin', 'Palestine', '0', 0, 9, 'https://i.imgur.com/3501caO.jpeg');
+
+-- --------------------------------------------------------
+
+--
+
+--
+
+CREATE TABLE `t-shirt` (
+  `URL` varchar(1000) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `ID` int(70) NOT NULL,
+  `INFO` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+
+--
+
+INSERT INTO `t-shirt` (`URL`, `name`, `price`, `ID`, `INFO`) VALUES
+('https://lp2.hm.com/hmgoepprod?set=source[/19/a6/19a6c3a63ee1de66d7a61a31411c01c56b4b4484.jpg],origin[dam],category[kids_clothing_tops_tshirts],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED T-SHIRT', 50, 1, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/3f/db/3fdbeaf2df0bb92f317ecef4e9da52a953acca87.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED T-SHIRT', 35, 2, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/eb/8a/eb8a7926b3e90b3b72e8dd719b80fde3dfe0c8cb.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'COTTON T-SHIRT', 25, 3, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/52/67/5267eff210bfb2287477f4fab48db06253e3f6fd.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED T-SHIRT', 20, 4, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/23/25/232539d2a3da44034bb94ea6bc6bc64143d984fa.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'MOTIF-FRONT T-SHIRT', 35, 5, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/50/9c/509c45423c138447d07862cf359f953ed260e918.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'GLITTER-PRINT T-SHIRT', 30, 6, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/6a/07/6a079fd40b7bc3502ce4887b3e9352c37135553c.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED T-SHIRT', 35, 7, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/4e/20/4e206ea9deb9b701653fdf65cde7690679d9095c.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED T-SHIRT', 25, 8, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/d6/a2/d6a278f1e08b3f48b55b27bfb2a786ee41177789.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED T-SHIRT', 25, 9, '');
+
+-- --------------------------------------------------------
+
+--
+
+--
+
+-- --------------------------------------------------------
+
+
+--
+
+--
+
+CREATE TABLE `dress` (
+  `URL` varchar(1000) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `ID` int(70) NOT NULL,
+  `INFO` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+--
+
+INSERT INTO `dress` (`URL`, `name`, `price`, `ID`, `INFO`) VALUES
+('https://lp2.hm.com/hmgoepprod?set=source[/47/e3/47e32da21d237b42b7b5062ef2a77d84a9b7411a.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PATTERNED ROMPER', 50, 1, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/45/2f/452ff5fb81c182baf0f6c5622e81fba1d2d6ea03.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'SEQUINED TULLE DRESS', 110, 2, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/42/ad/42ade7a25d7d528399e9b0957c5a3717e50e2e8b.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'TULLE-SKIRT DRESS', 50, 3, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/c8/31/c8311d09ee3627718e50821747580a3da5a843c5.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PUFF-SLEEVED DRESS', 100, 4, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/52/8f/528f1af3dcf690483b868dcffc75d4ec5077ad25.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'TULLE-SKIRT JERSEY DRESS', 50, 5, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/4d/dd/4ddd9e6401370f27638249109433e77635dea804.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'COTTON DRESS', 50, 6, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/a8/5d/a85d195eec406ad67ba61ed49656757f3213e711.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'PRINTED TULLE DRESS', 65, 7, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/fe/46/fe46cf6ddd7f82e6c884d717ca1c6d15c9bbdf38.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'ASYMMETRIC CHIFFON DRESS', 90, 8, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/9d/04/9d04148e8512fc122f6139ad1de8b6d14b7cc097.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', 'DOUBLE-WEAVE COTTON DRESS', 80, 9, '');
+
+-- --------------------------------------------------------
+
+
+
+CREATE TABLE `sales` (
+  `productName` varchar(70) DEFAULT NULL,
+  `Quantity` int(50) DEFAULT NULL,
+  `priceForOne` int(30) DEFAULT NULL,
+  `total` int(70) DEFAULT NULL,
+  `Date` date DEFAULT NULL,
+  `orderId` int(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sales`
+--
+
+INSERT INTO `sales` (`productName`, `Quantity`, `priceForOne`, `total`, `Date`, `orderId`) VALUES
+
+('Regal Jewel', 19, 85, 1615, '2020-08-07', 29),
+('Graduation Bouquet - Best Wishes', 4, 50, 200, '2020-08-08', 30),
+('Blue Hydrangea Bouquet', 5, 70, 350, '2020-08-09', 31),
+('Garden Party Bouquet', 11, 300, 3300, '2020-08-14', 32),
+('Regal Jewel', 15, 85, 1275, '2020-09-07', 33),
+('Graduation Bouquet - Best Wishes', 20, 50, 1000, '2020-09-08', 34),
+('Blue Hydrangea Bouquet', 20, 70, 1400, '2020-09-09', 35),
+('Garden Party Bouquet', 1, 300, 300, '2020-09-14', 36),
+('Regal Jewel', 19, 85, 1615, '2020-10-07', 37),
+('Graduation Bouquet - Best Wishes', 10, 50, 500, '2020-10-08', 38),
+('Blue Hydrangea Bouquet', 17, 70, 1190, '2020-10-09', 39),
+('Garden Party Bouquet', 1, 300, 300, '2020-10-14', 40),
+('Regal Jewel', 10, 85, 850, '2020-11-07', 41),
+('Graduation Bouquet - Best Wishes', 25, 50, 1250, '2020-11-08', 42),
+('Blue Hydrangea Bouquet', 7, 70, 490, '2020-11-09', 43),
+('Garden Party Bouquet', 21, 300, 6300, '2020-11-14', 44),
+('Regal Jewel', 12, 85, 1020, '2020-12-07', 45),
+('Graduation Bouquet - Best Wishes', 20, 50, 100, '2020-12-08', 46),
+('Red Rose Bouquet', 1, 40, 40, '2021-01-07', 47),
+('Garden Party Bouquet', 11, 200, 2200, '2021-05-04', 48),
+('Sweet Delight Bouquet', 1, 200, 200, '2021-02-08', 49),
+('Blue Hydrangea Bouquet', 27, 70, 1890, '2020-12-09', 50),
+('Garden Party Bouquet', 11, 200, 2200, '2021-04-14', 51),
+('Sweet Delight Bouquet', 1, 200, 200, '2021-03-09', 52);
+
+-- --------------------------------------------------------
+
+--
+
+
+--
+
+
+--
+
+CREATE TABLE `2-piece` (
+  `URL` varchar(1000) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `ID` int(70) NOT NULL,
+  `INFO` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+
+--
+
+INSERT INTO `2-piece` (`URL`, `name`, `price`, `ID`, `INFO`) VALUES
+('https://lp2.hm.com/hmgoepprod?set=source[/8c/ba/8cba982a45613e758e2e26d65e66b5a2f14f316d.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE SET', 85, 1, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/05/1a/051aad945eb7fc4ecb90eb5c3bfeba972ab054da.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE COTTON SET', 85, 2, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/aa/a0/aaa00671cc1e5d4e79b187314e93ff2897dc0533.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE PRINTED SET', 85, 3, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/1b/b4/1bb45b2bce63182251331ca6527632d5ecf75b18.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE PRINTED SET', 85, 4, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/e5/eb/e5ebe0c1b6f28b5e89d1e523dfc41c8dd0c813e7.jpg],origin[dam],category[kids_girls_clothing_shorts],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE COTTON SWEATSHIRT SET', 110, 5, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/57/ab/57ab2f90be4c2f93af653c33df73773bd5bb75b5.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE COTTON SET', 120, 6, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/94/a3/94a3b575e4a4f73d892eb9ed3089157b95f7e02a.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE COTTON SET', 100, 7, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/5b/5e/5b5e2d6880c3affe90d406419c9aa4b9b5633cd9.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE PRINTED SET', 60, 8, ''),
+('https://lp2.hm.com/hmgoepprod?set=source[/c5/da/c5da1182a7914a8ad8d6b3c6b7160f6cd5af4ff7.jpg],origin[dam],category[],type[LOOKBOOK],res[y],hmver[1]&call=url[file:/product/main]', '2-PIECE SET WITH COTTON TANK TOP AND SHORTS', 50, 9, '');
+
+-- --------------------------------------------------------
+
+
+-
+--
+
+CREATE TABLE `acc` (
+  `URL` varchar(1000) NOT NULL,
+  `name` varchar(70) NOT NULL,
+  `price` int(50) NOT NULL,
+  `ID` int(70) NOT NULL,
+  `INFO` varchar(70) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+
+--
+
+INSERT INTO `acc` (`URL`, `name`, `price`, `ID`, `INFO`) VALUES
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F51%2F95%2F51957e40a6a7194a4d065150ffc554a2d9979a28.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_girls_accessories_hairaccessories%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', '3-pack hairbands', 140, 1, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc7%2F68%2Fc76871f867c07cce98046efed5f1efbae950df46.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', 'Cotton twill bucket hat', 350, 2, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F1a%2F34%2F1a341059bf6846792e543d88c5a82efe597666cb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', 'Embroidered straw hat', 200, 3, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fbc%2Fbe%2Fbcbe0a604b5c69982841dce6b0317f7ca6b26657.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_girls_accessories_hairaccessories%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', '10-pack hair clips', 100, 4, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F9b%2F88%2F9b883dbfd053ce5b14b05b555fb6e0fb88154717.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_accessories_sunglasses%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', '2-pack sunglasses', 180, 5, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F9c%2Fa4%2F9ca4d69200426b127e50409ef4b5db2928bffb19.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bkids_accessories%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', 'Printed water bottle', 70, 6, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Ff7%2F6c%2Ff76cf86584bf2c9bc1f96764b12c35c65b6cce93.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', '35-piece hair set', 50, 7, ''),
+('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F6c%2F4e%2F6c4e9f33362c1889f0fc30e37b36cb4682506386.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]', 'Set with a bag and sun visor', 100, 8, ''),
+('https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F88%2F9d%2F889d1abe73f74dbc95b53293e50f1d98973293eb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D', 'Decorated sunglasses', 120, 9, '');
+
+
+--
+ALTER TABLE `jeans`
+  ADD PRIMARY KEY (`flowerID`);
+
+
+--
+ALTER TABLE `shoes`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+
+
+--
+-- Indexes for table `members`
+--
+ALTER TABLE `members`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `Email` (`Email`),
+  ADD UNIQUE KEY `LoginName` (`LoginName`) USING HASH;
+
+--
+
+--
+ALTER TABLE `t-shirt`
+  ADD PRIMARY KEY (`ID`);
+
+--
+
+
+
+
+--
+ALTER TABLE `dress`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `sales`
+--
+ALTER TABLE `sales`
+  ADD PRIMARY KEY (`orderId`);
+
+--
+-
+--
+ALTER TABLE `2-piece`
+  ADD PRIMARY KEY (`ID`);
+
+
+
+
+ALTER TABLE `acc`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+
+--
+-- AUTO_INCREMENT for table `jeanse`
+--
+ALTER TABLE `jeans`
+  MODIFY `flowerID` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+
+--
+ALTER TABLE `shoes`
+  MODIFY `ID` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+
+
+
+--
+-- AUTO_INCREMENT for table `members`
+
+ALTER TABLE `members`
+  MODIFY `id` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+
+`
+--
+ALTER TABLE `dress`
+  MODIFY `ID` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+
+
+
+--
+ALTER TABLE `sales`
+  MODIFY `orderId` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+
+ALTER TABLE `t-shirt`
+  MODIFY `ID` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+
+--
+ALTER TABLE `acc`
+  MODIFY `ID` int(70) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

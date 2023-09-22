@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.main{
+    font-family: 'Shadows Into Light', cursive;
+    margin: 2%;
+    background-color: #ffffff;
+}
+
+.card{
+    width: 20%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px #ffffff;
+    border-radius: 5px;
+    margin: 5%;
+    margin-left: 100px;
+    background-color: #0e0e0e;
+}
+
+.image img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card .title{
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
+
+.card .title h1{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.card .des{
+    padding: 3px;
+    text-align: center;
+    margin-top: -15px;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #0e0e0e;
+}
+.card .des button{
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding:10px;
+}
+.card .des button:hover{
+    background-color: #ffffff;
+    box-shadow: 0 0 15px #ffffff;
+    color: #0e0e0e;
+    transition: .5s;
+    cursor: pointer;
+}
+
